@@ -1,0 +1,137 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .hoverEffect {
+    @apply duration-300 cursor-pointer;
+  }
+  .headerSedenavLi {
+    @apply hover:underline underline-offset-2 cursor-pointer text-gray-300 hover:text-white;
+  }
+}
+
+/* ============= NavLink active Start here ============== */
+nav .active li {
+  color: black;
+  font-weight: 600;
+  text-decoration: 1px underline black;
+}
+
+@media screen and (max-width: 665px) {
+  nav .active li {
+    color: white;
+    font-weight: 600;
+    text-decoration: 1px underline white;
+  }
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/*.header(*/
+
+/* Header */
+.header {
+  width: 100%;
+  height: 5rem;
+  background-color: white;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 1rem;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  width: 5rem;
+}
+
+.menu-icon {
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+
+/* Desktop Menu */
+.desktop-menu {
+  width: 100%;
+  display: flex;
+  justify-content: center; /* Push items to the right */
+  align-items: center;
+  gap: 1rem; /* Space between items */
+  /*margin-right: 1rem; !* Add space between links and the edge of the container *!*/
+}
+
+.menu-item {
+  color: #767676;
+  font-size: 1rem;
+  text-decoration: none;
+  padding: 0.5rem;
+}
+
+.menu-item:hover,
+.menu-item.active {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+/* Side Navigation */
+.sidenav-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 50;
+}
+
+.sidenav-container {
+  width: 0%;
+  height: 100%;
+  background: #1a202c;
+  padding: 1rem;
+  position: relative;
+}
+
+.logo-light {
+  width: 7rem;
+}
+
+.sidenav-menu {
+  margin: 1rem 0;
+}
+
+.sidenav-item {
+  color: #fff;
+  padding: 0.5rem 0;
+  text-decoration: none;
+}
+
+.sidenav-item:hover {
+  font-weight: bold;
+}
+
+/* Close Icon */
+.close-icon {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  cursor: pointer;
+}
+
+/*)*/
+
+/* ============= NavLink active End here ================ */

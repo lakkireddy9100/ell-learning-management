@@ -1,0 +1,116 @@
+/* Header */
+.header {
+    width: 100%;
+    height: 5rem;
+    background-color: white;
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 1rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 5rem;
+}
+
+.menu-icon {
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+/* Desktop Menu */
+.desktop-menu {
+    display: flex;
+    gap: 1rem;
+}
+
+.menu-item {
+    color: #767676;
+    font-size: 1rem;
+    text-decoration: none;
+    padding: 0.5rem;
+}
+
+.menu-item:hover,
+.menu-item.active {
+    font-weight: bold;
+    text-decoration: underline;
+}
+/* Side Navigation Backdrop */
+.sidenav-backdrop {
+    position: fixed; /* Ensure it overlays the entire screen */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+    z-index: 9999; /* Ensure it stays above all other elements */
+}
+
+/* Sidebar Container */
+.sidenav-container {
+    width: 30%; /* 80% of the viewport width */
+    max-width: 300px; /* Optional: Limit maximum width */
+    height: 100%; /* Full viewport height */
+    background: #1a202c; /* Dark background for the sidebar */
+    position: fixed; /* Stick to the left edge of the screen */
+    top: 0;
+    left: 0; /* Start from the left edge */
+    padding: 1rem; /* Add padding inside the sidebar */
+    box-sizing: border-box; /* Include padding in the width */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3); /* Optional shadow for depth */
+    transform: translateX(-100%); /* Hide sidebar offscreen initially */
+    transition: transform 0.3s ease-in-out; /* Smooth sliding effect */
+}
+
+/* Logo in Sidebar */
+.logo-light {
+    width: 7rem; /* Adjust width for the logo */
+    margin-bottom: 1rem;
+}
+
+/* Sidebar Menu */
+.sidenav-menu {
+    margin: 1rem 0;
+    list-style: none; /* Remove bullet points */
+    padding: 0;
+}
+
+.sidenav-item {
+    color: #fff;
+    padding: 0.5rem 0;
+    text-decoration: none; /* Remove underline */
+    display: block; /* Ensure items stack vertically */
+    font-size: 1rem;
+    transition: color 0.3s ease-in-out;
+}
+
+.sidenav-item:hover {
+    color: #fbbf24; /* Accent color on hover */
+    font-weight: bold;
+}
+
+/* Close Icon */
+.close-icon {
+    position: absolute; /* Position at the top-right of the sidebar */
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: #fff;
+    transition: color 0.3s ease-in-out;
+}
+
+.close-icon:hover {
+    color: #f87171; /* Red hover color */
+}
