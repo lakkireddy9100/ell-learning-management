@@ -8,7 +8,7 @@ const initialState = {
 
 
 export const ell = createSlice({
-  name: "orebi",
+  name: "",
   initialState,
   reducers: {
     addToCart: (state, action) => {
